@@ -1,36 +1,37 @@
 var a = 10;
 
-//global scope
-// function my() {
-//   if (true) {
-//     var a = 20;
-//     console.log(a);
-//   }
-//   console.log(a);
-// }
+// global scope
+function my() {
+  if (true) {
+    var a = 20;
+    console.log(a);
+  }
+  console.log(a);
+}
+my();
 
-// my();
+// block scope
+let b = 30;
+function my1() {
+  if (true) {
+    let b = 50;
+    console.log(b);
+  }
+  console.log(b);
+}
+my1();
 
-//block scope
-// let b = 30;
-// function my1() {
-//   if (true) {
-//     let b = 50;
-//     console.log(b);
-//   }
-//   console.log(b);
-// }
+// use var 
+for (var i = 0; i < 10; ++i) {
+  console.log(i);
+}
+console.log(i);
 
-// my1();
-
-// for (var i = 0; i < 10; ++i) {
-//   console.log(i);
-// }
-// console.log(i);
+// use let 
 for (let i = 0; i < 10; ++i) {
   console.log(i);
 }
-// console.log(i);
+console.log(i);
 
 const arr = [1, 2, 3, 4];
 // arr = "str"; error can't reassign the values
@@ -60,8 +61,8 @@ class Newuser extends User {
     return `${this.name} Is A ${this.position}`;
   }
 }
-let go = new User("Govardhan Aaleswara", "23", "Chennai");
-let go1 = new Newuser("Govardhan", "23", "chennai", "Full Stack Developer");
+let go = new User("sivaiah", "23", "Chennai");
+let go1 = new Newuser("sivaiah", "23", "chennai", "Full Stack Developer");
 console.log(go);
 console.log(go.getUser());
 console.log(User.count());
@@ -88,16 +89,16 @@ console.log(book.size);
 
 // map
 let bo = new Map([
-  ["a1", "Govardhan"],
-  ["b1", "Aaleswara"]
+  ["a1", "sivaiah"],
+  ["b1", "babu"]
 ]);
-bo.set(["c1", "Govardhan Aaleswara"]);
+bo.set(["c1", "sivaiah"]);
 console.log(bo);
 
 // weakSet
 let abc = new WeakSet();
 let car = {
-  name: "Govardhan Aaleswara",
+  name: "sivaiah",
   position: "Full Stack Developer"
 };
 abc.add(car);
