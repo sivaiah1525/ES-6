@@ -14,7 +14,7 @@ var person = {
      }
 var change = person;
 // change properties
-change.lastName = 'AB';// object is mutable (that means change properties value)
+change.lastName = 'AB';
 //access properties
 console.log('firstName: ' + person.firstName + ' lastName: ' + person.lastName);
 
@@ -248,7 +248,7 @@ function Cricket(captain,vicecaptain,wk_Kepper,bowler) {
       this.bowler = bowler;
     }
     // adding properties for constructor(undefind)
-  Cricket.spinnerUndefind = 'aswin'; // undefind
+  Cricket.spinnerUndefind = 'aswin'; 
 
   var india = new Cricket('virat','rahual','pant','bumbhara');
   var england = new Cricket('cook' ,'root','anderson','sam');
@@ -316,94 +316,19 @@ function superMarket(first,second,thired) {
   console.log('more: ' + more.thiredFloor);// dynamic function
 
 // type of object
-var x1 = new Object();   // A new Object object
-var x2 = new String();   // A new String object
-var x3 = new Number();   // A new Number object
-var x4 = new Boolean();  // A new Boolean object
-var x5 = new Array();    // A new Array object
-var x6 = new RegExp();   // A new RegExp object
-var x7 = new Function(); // A new Function object
-var x8 = new Date();     // A new Date object
-var x9 = {};        // object
-var x10 = "";        // string
-var x11 = 0;         // number
-var x12 = false;     // boolean
-var x13 = [];        // object (not array)
-var x14 = /()/;      // object
-var x15 = function(){};  // function
-
-console.log('object: ' + typeof x1);
-console.log('String: ' + typeof x2);
-console.log('number: ' + typeof x3);
-console.log('Boolean: ' + typeof x4);
-console.log('Array: ' + typeof x5);
-console.log('regexp: ' + typeof x6);
-console.log('Function: ' + typeof x7);
-console.log('date: ' + typeof x8);
-console.log('{}: ' + typeof x9);
-console.log('0: ' + typeof x10);
-console.log('regexp: ' + typeof x11);
-console.log('false: ' + typeof x12);
-console.log('[]: ' + typeof x13);
-console.log('/()/: ' + typeof x14);
-console.log('function: ' + typeof x15);
-
-// object using prototype
-function Cricket(captain,vicecaptain,wk_Kepper,bowler) {
-      this.captain = captain;
-      this.vicecaptain = vicecaptain;
-      this.wk_Kepper = wk_Kepper;
-      this.bowler = bowler;
-    }
-    // adding prototype property
-  Cricket.prototype.spinner = 'aswin';
-  var india = new Cricket('virat','rahaul','pant','bumbhara');
-  console.log('spinner: ' + india.spinner);
-
-// object using prototype
- function Games(game1,game2) {
-    this.game1 = game1;
-    this.game2 = game2;
-    }
-    Games.prototype.joinGame = function () {
-          return this.game1 +' ' +this.game2;
-    }
- var sports = new Games('Cricket','football');
- console.log('sports: ' + sports.joinGame());
+var x1 = new Object();   
+var x2 = new String();   
+var x3 = new Number();   
+var x4 = new Boolean();  
+var x5 = new Array();    
+var x6 = new RegExp();   
+var x7 = new Function(); 
+var x8 = new Date();     
+ x9 = {};                
+var x10 = "";            
+var x11 = 0;             
+var x12 = false;         
+var x13 = [];             
 
 
- //es5 new object properties
-var software = {
-    company1:'google',
-    company2:'twitter',
-    company3:'facebook'
-  }
-  Object.defineProperty(software, 'google', {value:'instgram'});
-  console.log('company1: ' +software.company1 );
 
-//writable enumerable
-var software = {
-    company1:'google',
-    company2:'twitter',
-    company3:'facebook'
-  }
-  Object.defineProperty(software, 'google', {enumerable:false});
-  Object.getOwnPropertyNames(software);
-  console.log('company1: ' +software.company1 );
-
-  //getter using object
-  var phone = {
-     smartPhone:'samsang',
-     iPhone:'iphone-x',
-     basicMobile:'nokia'
-  }
-  Object.defineProperty(phone,'mobiles',{
-    get: function () {
-      return this.smartPhone + ' ' + this.iPhone;
-    }
-  });
-  console.log('phone: ' + phone.mobiles);
-
-  /*5.from*/
-var x = Array.from('javascript');// same as split method;
-console.log(x);

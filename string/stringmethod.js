@@ -81,6 +81,3 @@ console.log(x);
 var x = 'javascript';
 console.log(x.charAt(0));//return string as per the index poistion.
 
-/*17,18,19,20,21*/
-//to upper,toLowerCase
-//localeCompare;
